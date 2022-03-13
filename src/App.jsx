@@ -12,10 +12,19 @@ const reducer = (state, action) => {
       } else {
         return state + action.digit
       }
+    case 'decimal':
+      if (/\.\d*$/.test(state)) {
+        // Prevent more than one decimal point per number
+        return state
+      } else if (/[-+*/]$/.test(state)) {
+        return state + '0.'
+      } else {
+        return state + '.'
+      }
     case '+':
     case '*':
     case '/':
-      return state.replace(/^(.*\d)([-+*/]-?)?$/, '$1' + action.type)
+      return state.replace(/^(.*(\d|\.))([-+*/]-?)?$/, '$1' + action.type)
     case '-':
       if (/[-+*/]-$/.test(state)) {
         return state

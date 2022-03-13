@@ -51,7 +51,11 @@ const Buttons = ({ dispatch }) => {
         digit="0"
         dispatch={dispatch}
       />
-      <Button id="decimal" label="." />
+      <Button
+        id="decimal"
+        label="."
+        onClick={() => dispatch({ type: 'decimal' })}
+      />
     </div>
   )
 }
