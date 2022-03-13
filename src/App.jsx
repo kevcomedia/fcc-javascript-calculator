@@ -8,13 +8,15 @@ const reducer = (state, action) => {
     case 'clear':
       return { display: '0' }
     case 'digit':
-      if (state.display === '0') {
+      if (state.isFreshEval || state.display === '0') {
         return { display: action.digit }
       } else {
         return { display: state.display + action.digit }
       }
     case 'decimal':
-      if (/\.\d*$/.test(state.display)) {
+      if (state.isFreshEval) {
+        return { display: '0.' }
+      } else if (/\.\d*$/.test(state.display)) {
         // Prevent more than one decimal point per number
         return state
       } else if (/[-+*/]$/.test(state.display)) {
