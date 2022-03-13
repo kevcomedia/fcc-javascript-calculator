@@ -1,6 +1,7 @@
 const Button = ({ id, className, label, type }) => {
   const typeClasses = {
     digit: 'bg-stone-500 hover:bg-stone-600',
+    operator: 'bg-stone-400 hover:bg-zinc-500',
     equals: 'bg-sky-600 hover:bg-sky-700',
   }
 
