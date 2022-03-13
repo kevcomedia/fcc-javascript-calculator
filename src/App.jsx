@@ -42,6 +42,7 @@ const App = () => {
           id="zero"
           label="0"
         />
+        <Button className="col-start-3 row-start-5" id="decimal" label="." />
         <Button
           className="col-start-4 row-start-4 row-span-2"
           id="equals"
