@@ -5,6 +5,7 @@ const App = () => {
     // temporary padding so the test menu doesn't block the calculator
     <div className="p-16 w-96">
       <div className="grid grid-cols-4 grid-rows-5 gap-1">
+        <Button className="col-span-2" id="clear" label="AC" type="clear" />
         <Button className="col-start-3" id="divide" label="/" type="operator" />
         <Button
           className="col-start-4"
