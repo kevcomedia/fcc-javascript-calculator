@@ -1,6 +1,7 @@
 import { useReducer } from 'react'
 import Display from './components/Display'
 import Buttons from './components/Buttons'
+import calculatorService from './services/calculatorService'
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -31,6 +32,8 @@ const reducer = (state, action) => {
       } else {
         return state + '-'
       }
+    case 'equals':
+      return '' + calculatorService.evaluateExpression(state)
   }
 }
 

@@ -44,7 +44,13 @@ const Buttons = ({ dispatch }) => {
       <DigitButton id="one" digit="1" dispatch={dispatch} />
       <DigitButton id="two" digit="2" dispatch={dispatch} />
       <DigitButton id="three" digit="3" dispatch={dispatch} />
-      <Button className="row-span-2" id="equals" label="=" type="equals" />
+      <Button
+        className="row-span-2"
+        id="equals"
+        label="="
+        type="equals"
+        onClick={() => dispatch({ type: 'equals' })}
+      />
       <DigitButton
         className="col-span-2"
         id="zero"
