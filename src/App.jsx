@@ -6,6 +6,12 @@ const reducer = (state, action) => {
   switch (action.type) {
     case 'clear':
       return '0'
+    case 'digit':
+      if (state === '0') {
+        return action.digit
+      } else {
+        return state + action.digit
+      }
   }
 }
 

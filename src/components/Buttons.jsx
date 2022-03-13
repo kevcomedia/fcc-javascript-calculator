@@ -1,4 +1,5 @@
 import Button from './Button'
+import DigitButton from './DigitButton'
 
 const Buttons = ({ dispatch }) => {
   return (
@@ -12,19 +13,24 @@ const Buttons = ({ dispatch }) => {
       />
       <Button id="divide" label="/" type="operator" />
       <Button id="multiply" label="*" type="operator" />
-      <Button id="seven" label="7" />
-      <Button id="eight" label="8" />
-      <Button id="nine" label="9" />
+      <DigitButton id="seven" digit="7" dispatch={dispatch} />
+      <DigitButton id="eight" digit="8" dispatch={dispatch} />
+      <DigitButton id="nine" digit="9" dispatch={dispatch} />
       <Button id="subtract" label="-" type="operator" />
-      <Button id="four" label="4" />
-      <Button id="five" label="5" />
-      <Button id="six" label="6" />
+      <DigitButton id="four" digit="4" dispatch={dispatch} />
+      <DigitButton id="five" digit="5" dispatch={dispatch} />
+      <DigitButton id="six" digit="6" dispatch={dispatch} />
       <Button id="add" label="+" type="operator" />
-      <Button id="one" label="1" />
-      <Button id="two" label="2" />
-      <Button id="three" label="3" />
+      <DigitButton id="one" digit="1" dispatch={dispatch} />
+      <DigitButton id="two" digit="2" dispatch={dispatch} />
+      <DigitButton id="three" digit="3" dispatch={dispatch} />
       <Button className="row-span-2" id="equals" label="=" type="equals" />
-      <Button className="col-span-2" id="zero" label="0" />
+      <DigitButton
+        className="col-span-2"
+        id="zero"
+        digit="0"
+        dispatch={dispatch}
+      />
       <Button id="decimal" label="." />
     </div>
   )
