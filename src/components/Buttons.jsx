@@ -11,8 +11,18 @@ const Buttons = ({ dispatch }) => {
         type="clear"
         onClick={() => dispatch({ type: 'clear' })}
       />
-      <Button id="divide" label="/" type="operator" />
-      <Button id="multiply" label="*" type="operator" />
+      <Button
+        id="divide"
+        label="/"
+        type="operator"
+        onClick={() => dispatch({ type: '/' })}
+      />
+      <Button
+        id="multiply"
+        label="*"
+        type="operator"
+        onClick={() => dispatch({ type: '*' })}
+      />
       <DigitButton id="seven" digit="7" dispatch={dispatch} />
       <DigitButton id="eight" digit="8" dispatch={dispatch} />
       <DigitButton id="nine" digit="9" dispatch={dispatch} />
@@ -20,7 +30,12 @@ const Buttons = ({ dispatch }) => {
       <DigitButton id="four" digit="4" dispatch={dispatch} />
       <DigitButton id="five" digit="5" dispatch={dispatch} />
       <DigitButton id="six" digit="6" dispatch={dispatch} />
-      <Button id="add" label="+" type="operator" />
+      <Button
+        id="add"
+        label="+"
+        type="operator"
+        onClick={() => dispatch({ type: '+' })}
+      />
       <DigitButton id="one" digit="1" dispatch={dispatch} />
       <DigitButton id="two" digit="2" dispatch={dispatch} />
       <DigitButton id="three" digit="3" dispatch={dispatch} />

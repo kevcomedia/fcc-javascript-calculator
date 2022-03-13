@@ -12,6 +12,10 @@ const reducer = (state, action) => {
       } else {
         return state + action.digit
       }
+    case '+':
+    case '*':
+    case '/':
+      return state.replace(/[-+*/]?$/, action.type)
   }
 }
 
