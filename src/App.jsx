@@ -15,9 +15,19 @@ const reducer = (state, action) => {
     case '+':
     case '*':
     case '/':
-      return state.replace(/[-+*/]?$/, action.type)
+      if (/[-+*/]-$/.test(state)) {
+        return state.replace(/..$/, action.type)
+      } else if (/[-+*/]$/.test(state)) {
+        return state.replace(/.$/, action.type)
+      } else {
+        return state + action.type
+      }
     case '-':
-      return state.replace(/-?$/, '-')
+      if (/[-+*/]-$/.test(state)) {
+        return state
+      } else {
+        return state + '-'
+      }
   }
 }
 
