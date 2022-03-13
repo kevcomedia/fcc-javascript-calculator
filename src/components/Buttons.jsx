@@ -1,9 +1,15 @@
 import Button from './Button'
 
-const Buttons = () => {
+const Buttons = ({ dispatch }) => {
   return (
     <div className="grid grid-cols-4 grid-rows-5 gap-1">
-      <Button className="col-span-2" id="clear" label="AC" type="clear" />
+      <Button
+        className="col-span-2"
+        id="clear"
+        label="AC"
+        type="clear"
+        onClick={() => dispatch({ type: 'clear' })}
+      />
       <Button id="divide" label="/" type="operator" />
       <Button id="multiply" label="*" type="operator" />
       <Button id="seven" label="7" />
