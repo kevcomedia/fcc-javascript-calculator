@@ -26,7 +26,12 @@ const Buttons = ({ dispatch }) => {
       <DigitButton id="seven" digit="7" dispatch={dispatch} />
       <DigitButton id="eight" digit="8" dispatch={dispatch} />
       <DigitButton id="nine" digit="9" dispatch={dispatch} />
-      <Button id="subtract" label="-" type="operator" />
+      <Button
+        id="subtract"
+        label="-"
+        type="operator"
+        onClick={() => dispatch({ type: '-' })}
+      />
       <DigitButton id="four" digit="4" dispatch={dispatch} />
       <DigitButton id="five" digit="5" dispatch={dispatch} />
       <DigitButton id="six" digit="6" dispatch={dispatch} />
