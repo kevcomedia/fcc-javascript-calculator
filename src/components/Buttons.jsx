@@ -4,45 +4,22 @@ const Buttons = () => {
   return (
     <div className="grid grid-cols-4 grid-rows-5 gap-1">
       <Button className="col-span-2" id="clear" label="AC" type="clear" />
-      <Button className="col-start-3" id="divide" label="/" type="operator" />
-      <Button className="col-start-4" id="multiply" label="*" type="operator" />
-      <Button
-        className="col-start-1 row-start-2 aspect-square"
-        id="seven"
-        label="7"
-      />
-      <Button className="col-start-2 row-start-2" id="eight" label="8" />
-      <Button className="col-start-3 row-start-2" id="nine" label="9" />
-      <Button
-        className="col-start-4 row-start-2"
-        id="subtract"
-        label="-"
-        type="operator"
-      />
-      <Button className="col-start-1 row-start-3" id="four" label="4" />
-      <Button className="col-start-2 row-start-3" id="five" label="5" />
-      <Button className="col-start-3 row-start-3" id="six" label="6" />
-      <Button
-        className="col-start-4 row-start-3"
-        id="add"
-        label="+"
-        type="operator"
-      />
-      <Button className="col-start-1 row-start-4" id="one" label="1" />
-      <Button className="col-start-2 row-start-4" id="two" label="2" />
-      <Button className="col-start-3 row-start-4" id="three" label="3" />
-      <Button
-        className="col-start-1 row-start-5 col-span-2"
-        id="zero"
-        label="0"
-      />
-      <Button className="col-start-3 row-start-5" id="decimal" label="." />
-      <Button
-        className="col-start-4 row-start-4 row-span-2"
-        id="equals"
-        label="="
-        type="equals"
-      />
+      <Button id="divide" label="/" type="operator" />
+      <Button id="multiply" label="*" type="operator" />
+      <Button id="seven" label="7" />
+      <Button id="eight" label="8" />
+      <Button id="nine" label="9" />
+      <Button id="subtract" label="-" type="operator" />
+      <Button id="four" label="4" />
+      <Button id="five" label="5" />
+      <Button id="six" label="6" />
+      <Button id="add" label="+" type="operator" />
+      <Button id="one" label="1" />
+      <Button id="two" label="2" />
+      <Button id="three" label="3" />
+      <Button className="row-span-2" id="equals" label="=" type="equals" />
+      <Button className="col-span-2" id="zero" label="0" />
+      <Button id="decimal" label="." />
     </div>
   )
 }
