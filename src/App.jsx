@@ -33,7 +33,8 @@ const reducer = (state, action) => {
         return state + '-'
       }
     case 'equals':
-      return '' + calculatorService.evaluateExpression(state)
+      // Show only at most 10 decimal places, but trim any trailing zeroes.
+      return `${+calculatorService.evaluateExpression(state).toPrecision(10)}`
   }
 }
 
